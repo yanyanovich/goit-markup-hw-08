@@ -1,0 +1,49 @@
+.benefits.section {
+  padding-bottom: 0;
+}
+.benefits {
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    flex-basis: calc((100% / 4) - 30px);
+    &::before {
+      content: " ";
+      display: block;
+      height: 120px;
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #f5f4fa;
+      border-radius: 4px;
+    }
+  }
+  &__title {
+    margin-top: 30px;
+    color: $titles-color;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__text {
+    margin-top: 10px;
+    line-height: 1.7;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+}
+.icon-antena::before {
+  background-image: url("../images/antenna.svg");
+}
+.icon-clock::before {
+  background-image: url("../images/clock.svg");
+}
+.icon-diagram::before {
+  background-image: url("../images/diagram.svg");
+}
+.icon-astronaut::before {
+  background-image: url("../images/astronaut.svg");
+}

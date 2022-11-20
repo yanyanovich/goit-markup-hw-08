@@ -1,0 +1,39 @@
+.about {
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    flex-basis: calc((100% / 3));
+    position: relative;
+  }
+  &__text {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: 0;
+    padding: 27px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  &__image {
+    width: 100%;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    line-height: 1.17;
+    color: $titles-color;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}

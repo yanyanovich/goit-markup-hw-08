@@ -1,0 +1,44 @@
+.section.hero {
+  padding: 200px 0;
+}
+.hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/background-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  text-align: center;
+  &__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.37;
+    color: $primary-white-color;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  &__button {
+    margin-top: 30px;
+    padding: 10px 32px;
+    color: $primary-white-color;
+    background-color: $hover-color;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.87;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    transition: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $transition-function;
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
+    }
+  }
+}

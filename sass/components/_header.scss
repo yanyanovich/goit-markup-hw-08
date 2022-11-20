@@ -1,0 +1,109 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #000000;
+    span {
+      color: #2196f3;
+    }
+  }
+  &__information {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  &__mail {
+    margin-right: 50px;
+  }
+  &__mail a,
+  &__phone a {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    transition: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: $transition-function;
+    &:hover,
+    &:focus {
+      color: $hover-color;
+      fill: currentColor;
+    }
+    span {
+      margin-right: 10px;
+      &:hover,
+      &:focus {
+        fill: currentColor;
+      }
+    }
+  }
+}
+.navigation {
+  &__menu {
+    padding-left: 0;
+    margin-left: 93px;
+    display: flex;
+    gap: 50px;
+  }
+  &__item.current &__link {
+    color: #2196f3;
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #2196f3;
+      border-radius: 2px;
+      transition: background-color;
+      transition-duration: 250ms;
+      transition-timing-function: $transition-function;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 32px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: #212121;
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: $transition-function;
+    position: relative;
+    &::after {
+      content: "";
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #2196f3;
+      border-radius: 2px;
+      transition: opacity;
+      transition-duration: 250ms;
+      transition-timing-function: $transition-function;
+    }
+    &:hover:after {
+      opacity: 1;
+    }
+    &:hover,
+    &:focus {
+      color: $hover-color;
+    }
+  }
+}
