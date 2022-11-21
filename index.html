@@ -18,6 +18,11 @@
       <div class="container">
         <div class="header__container">
           <a class="header__logo" href="#"><span>Web</span>Studio</a>
+          <div class="header__burger js-open-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <nav class="navigation">
             <ul class="navigation__menu">
               <li class="navigation__item current"><a href="#" class="navigation__link">Студія</a></li>
@@ -52,6 +57,58 @@
         </div>
       </div>
     </header>
+    <div class="mobile-menu js-menu-container">
+      <button type="button" class="mobile-menu__button js-close-menu">
+        <svg width="20" height="20">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+        <nav class="mob-navigation">
+          <ul class="mob-navigation__list">
+            <li class="mob-navigation__item">
+              <a href="##" class="mob-navigation__link">Студія</a>
+            </li>
+            <li class="mob-navigation__item">
+              <a href="##" class="mob-navigation__link">Портфоліо</a>
+            </li>
+            <li class="mob-navigation__item">
+              <a href="##" class="mob-navigation__link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="information">
+          <ul class="information__list">
+            <li class="information__item information__item-phone">
+              <a href="tel:+380961111111" class="information__link">+38 096 111 11 11</a>
+            </li>
+            <li class="information__item information__item-mail">
+              <a href="mailto:info@devstudio.com" class="information__link">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="information-social__list">
+            <li class="information-social__item">
+              <a href="" class="information-social__link">
+                Instagram
+              </a>
+            </li>
+            <li class="information-social__item">
+              <a href="" class="information-social__link">
+                Twitter
+              </a>
+            </li>
+            <li class="information-social__item">
+              <a href="" class="information-social__link">
+                Facebook
+              </a>
+            </li>
+            <li class="information-social__item">
+              <a href="" class="information-social__link">
+                Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+    </div>
     <main>
       <section class="hero section ">
         <div class="container">
@@ -488,5 +545,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

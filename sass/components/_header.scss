@@ -14,19 +14,69 @@
       color: #2196f3;
     }
   }
+  &__burger {
+    margin-left: auto;
+    width: 24px;
+    height: 16px;
+    padding: 22px 0;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+    span {
+      width: 24px;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #212121;
+      transition: all 0.5s;
+    }
+    &:hover span,
+    &:focus span {
+      background-color: #2196f3;
+    }
+    span:nth-of-type(2) {
+      top: calc(50% - 7px);
+    }
+    span:nth-of-type(3) {
+      top: calc(50% + 7px);
+    }
+    @media (min-width: 768px) {
+      & {
+        display: none;
+      }
+    }
+  }
   &__information {
     margin-left: auto;
-    display: flex;
-    align-items: center;
+    display: none;
+    @media (min-width: 768px) {
+      & {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+      }
+    }
+    @media (min-width: 1200px) {
+      & {
+        align-items: center;
+        flex-direction: row;
+      }
+    }
   }
   &__mail {
-    margin-right: 50px;
+    @media (min-width: 1200px) {
+      & {
+        margin-right: 50px;
+      }
+    }
   }
   &__mail a,
   &__phone a {
     display: flex;
     align-items: center;
-    padding: 32px 0;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -34,6 +84,11 @@
     transition: color, fill;
     transition-duration: 250ms;
     transition-timing-function: $transition-function;
+    @media (min-width: 1200px) {
+      & {
+        padding: 32px 0;
+      }
+    }
     &:hover,
     &:focus {
       color: $hover-color;
@@ -50,10 +105,20 @@
 }
 .navigation {
   &__menu {
-    padding-left: 0;
-    margin-left: 93px;
-    display: flex;
-    gap: 50px;
+    display: none;
+    @media (min-width: 768px) {
+      & {
+        margin-left: 88px;
+        padding-left: 0;
+        display: flex;
+        gap: 50px;
+      }
+    }
+    @media (min-width: 1200px) {
+      & {
+        margin-left: 93px;
+      }
+    }
   }
   &__item.current &__link {
     color: #2196f3;
@@ -104,6 +169,114 @@
     &:hover,
     &:focus {
       color: $hover-color;
+    }
+  }
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-white-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  padding: 48px 40px;
+  z-index: 10;
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+  &__button {
+    position: absolute;
+    right: 25px;
+    top: 21px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    border: 0;
+    transition: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      fill: #2196f3;
+    }
+  }
+  .information {
+    margin-top: auto;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    &__item {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: #757575;
+      transition: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__item-phone {
+      font-size: 34px;
+      line-height: 40px;
+      color: #2196f3;
+    }
+    &-social__list {
+      margin-top: 64px;
+      display: flex;
+    }
+    &-social__item {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #2196f3;
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        margin-right: 10px;
+      }
+    }
+    &-social__link:first-child {
+      margin-left: 0;
+    }
+    &-social__link {
+      margin: 0 10px;
+    }
+  }
+}
+.mob-navigation {
+  &__list {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: #212121;
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: #2196f3;
+    }
+    &.current {
+      color: #2196f3;
     }
   }
 }

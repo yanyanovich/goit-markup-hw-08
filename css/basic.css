@@ -35,11 +35,24 @@ li {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 480px;
+  padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 9px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0;
+  }
+}
 .section {
   padding: 94px 0;
 }
