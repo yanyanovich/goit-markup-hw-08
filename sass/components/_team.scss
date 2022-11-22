@@ -2,24 +2,48 @@
   background-color: #f5f4fa;
   &__title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: $titles-color;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @media (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 1.17;
+      margin-bottom: 50px;
+    }
   }
   &__list {
     display: flex;
-    margin-left: calc(-1 * 30px);
+    flex-wrap: wrap;
+    margin-top: -30px;
+
+    @media (min-width: 768px) {
+      margin-left: calc(-1 * 30px);
+    }
+    @media (min-width: 1200px) {
+      flex-wrap: nowrap;
+      margin-top: 0;
+    }
   }
   &__item {
-    flex-basis: calc((100% / 3) - 30px);
-    margin-left: 30px;
+    flex-basis: 100%;
+    margin-top: 30px;
+    flex-basis: 100%;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: $primary-white-color;
+    @media (min-width: 768px) {
+      flex-basis: calc((100% / 2) - 30px);
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    @media (min-width: 1200px) {
+      flex-basis: calc((100% / 3) - 30px);
+      margin-top: 0px;
+    }
     img {
       width: 100%;
     }

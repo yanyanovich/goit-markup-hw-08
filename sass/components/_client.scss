@@ -1,12 +1,16 @@
 .client {
   &__title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: $titles-color;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @media (min-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
   &__list {
     display: flex;
@@ -14,10 +18,22 @@
     padding: 0;
     margin: 0;
     margin-left: calc(-1 * 30px);
+    margin-top: calc(-1 * 30px);
+    @media (min-width: 1200px) {
+      margin-top: 0;
+    }
   }
   &__item {
-    flex-basis: calc(100% / 6 - 30px);
+    flex-basis: calc(100% / 2 - 30px);
     margin-left: 30px;
+    margin-top: 30px;
+    @media (min-width: 768px) {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+    @media (min-width: 1200px) {
+      flex-basis: calc(100% / 6 - 30px);
+      margin-top: 0px;
+    }
   }
   &__link {
     display: flex;
@@ -25,7 +41,7 @@
     justify-content: center;
     fill: #afb1b8;
     height: 92px;
-    width: 170px;
+    width: 100%;
     border: 1px solid #afb1b8;
     border-radius: 4px;
     transition: background-color, fill, border;
@@ -35,6 +51,9 @@
     &:focus {
       border-color: $hover-color;
       fill: $hover-color;
+    }
+    @media (min-width: 1200px) {
+      width: 170px;
     }
   }
 }

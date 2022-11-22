@@ -1,4 +1,8 @@
 .about {
+  display: none;
+  @media (min-width: 1200px) {
+    display: block;
+  }
   &__list {
     display: flex;
     gap: 30px;
