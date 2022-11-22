@@ -190,8 +190,31 @@
           <ul class="team__list">
             <li class="team__item">
               <picture>
-                <source srcset="./images/person-1.jpg 1x, ./images/img-person1@2p.jpg 2x" media="(max-width: 468px)">
-                <img src="./images/person-1.jpg" width="270" height="260" alt="Ігор Дем'яненко">
+                <source
+                  srcset="
+                    ./images/team/person1-laptop.jpg 1x,
+                    ./images/team/person1-laptop@2p.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                  ./images/team/person1-tablet.jpg 1x,
+                  ./images/team/person1-tablet@2p.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                  ./images/team/person1-mobile.jpg 1x,
+                  ./images/team/person1-mobile@2p.jpg 2x
+                  "
+                />
+                <img
+                  class="image"
+                  src="./images/team/person1-mobile.jpg"
+                  alt="дизайнер продукту"
+                />
               </picture>
               <div class="team__text">
                 <h3>Ігор Дем'яненко</h3>
