@@ -223,6 +223,9 @@
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+    &__item-mail:hover {
+      color: #2196f3;
+    }
     &__item-phone {
       font-size: 34px;
       line-height: 40px;
@@ -236,10 +239,13 @@
       font-family: "Roboto";
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 15px;
       line-height: 22px;
       letter-spacing: 0.02em;
       color: #2196f3;
+      @media (min-width: 410px) {
+        font-size: 18px;
+      }
 
       &:not(:last-child) {
         border-right: 1px solid rgba(33, 33, 33, 0.2);
