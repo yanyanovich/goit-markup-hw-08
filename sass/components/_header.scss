@@ -10,6 +10,10 @@
     font-size: 26px;
     line-height: 1.2;
     color: #000000;
+    padding: 16px 0;
+    @media (min-width: 768px) {
+      padding: 0;
+    }
     span {
       color: #2196f3;
     }
@@ -18,7 +22,6 @@
     margin-left: auto;
     width: 24px;
     height: 16px;
-    padding: 22px 0;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -78,15 +81,19 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.02em;
-    line-height: 1.15;
+    line-height: 1.16;
     transition: color, fill;
     transition-duration: 250ms;
     transition-timing-function: $transition-function;
+    @media (min-width: 768px) {
+    }
     @media (min-width: 1200px) {
       & {
         padding: 32px 0;
+        font-size: 14px;
+        line-height: 1.15;
       }
     }
     &:hover,

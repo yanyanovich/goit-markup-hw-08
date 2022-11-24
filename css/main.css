@@ -336,6 +336,12 @@ li {
   font-size: 26px;
   line-height: 1.2;
   color: #000000;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    padding: 0;
+  }
 }
 .header__logo span {
   color: #2196f3;
@@ -344,7 +350,6 @@ li {
   margin-left: auto;
   width: 24px;
   height: 16px;
-  padding: 22px 0;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -416,9 +421,9 @@ li {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.02em;
-  line-height: 1.15;
+  line-height: 1.16;
   -webkit-transition: color, fill;
   transition: color, fill;
   -webkit-transition-duration: 250ms;
@@ -429,6 +434,8 @@ li {
 @media (min-width: 1200px) {
   .header__mail a, .header__phone a {
     padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.15;
   }
 }
 .header__mail a:hover, .header__mail a:focus, .header__phone a:hover, .header__phone a:focus {
@@ -1285,10 +1292,14 @@ li {
 .footer__social-block {
   margin-top: 60px;
 }
+@media (min-width: 768px) {
+  .footer__social-block {
+    margin-top: 0;
+  }
+}
 @media (min-width: 1200px) {
   .footer__social-block {
     margin-left: 100px;
-    margin-top: 0;
   }
 }
 .footer__social-title {
@@ -1347,6 +1358,7 @@ li {
   .footer__email-block {
     margin-top: 0;
     margin-left: 90px;
+    width: auto;
   }
 }
 .footer__email-title {
@@ -1623,12 +1635,12 @@ li {
   position: relative;
   font-weight: 400;
   font-size: 12px;
-  line-height: 13px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   color: #757575;
   cursor: pointer;
 }
-@media (min-width: 468px) {
+@media (min-width: 1200px) {
   .modal__checkbox-label {
     font-size: 14px;
     line-height: 24px;
@@ -1653,7 +1665,6 @@ li {
   height: 15px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-left: 10px;
   border: 2px solid #212121;
   border-radius: 4px;
 }
@@ -1661,9 +1672,6 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
